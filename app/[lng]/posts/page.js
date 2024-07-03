@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { allPosts } from 'contentlayer/generated'
 import dayjs from "dayjs";
-import { useTranslation } from "@/app/i18n/index.js"
+import { getTranslation } from "@/app/i18n/index.js"
 import Like from './like';
 
 export const generateMetadata = async ({ params: { lng } }) => {
-  const { t } = await useTranslation(lng, 'posts')
+  const { t } = await getTranslation(lng, 'posts')
     return { 
       title: t('title'),
       description: t('description'),
@@ -33,7 +33,7 @@ function PostCard({lng, ...post}) {
 }
 
 export default async function Home({ params: { lng } }) {
-  const { t } = await useTranslation(lng)
+  const { t } = await getTranslation(lng)
   return (
     <div className="mx-auto max-w-xl py-8">
       <h1 className="mb-8 text-center text-2xl font-black">{t('blogList')}</h1>
