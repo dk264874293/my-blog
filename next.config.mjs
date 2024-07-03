@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withContentlayer } from 'next-contentlayer'
+import bundleAnalyzer from '@next/bundle-analyzer'
 
-export default nextConfig;
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+export default withBundleAnalyzer(withContentlayer({}))
