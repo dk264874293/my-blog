@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.1.1",
     "@next/bundle-analyzer": "^14.2.4",
+    "@waline/client": "^3.2.6",
     "accept-language": "^3.0.18",
     "dayjs": "^1.11.11",
     "i18next": "^23.11.5",
