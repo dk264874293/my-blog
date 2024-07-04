@@ -73,7 +73,7 @@ const Page = ({ params }) => {
         </div>
         <MDXContent />
       </article>
-      <Waline el='#waline' serverURL="https://next-blog-chi-pearl.vercel.app/" />
+      <Waline el='#waline' serverURL="https://waline-blog-sigma.vercel.app/" />
     </>
   )
 }
